@@ -1,0 +1,23 @@
+/.idea
+
+# Ignore all .log files
+*.log
+# Ignore all .tmp files
+*.tmp
+# Ignore all .bak files
+*.bak
+# Ignore all .swp files
+*.swp
+# Ignore all .so files
+*.so
+# Ignore all .DS_Store files (macOS)
+.DS_Store
+# Ignore all .vscode files
+.vscode
+# Ignore all .env files
+.env
+# Ignore all .exe files
+*.exe
+# Ignore all .dll files
+*.dll
+# Ignore all .so files
