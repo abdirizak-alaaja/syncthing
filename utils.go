@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/abdirizak-alaaja/syncthing/types"
+	// "github.com/abdirizak-alaaja/syncthing/types"
 	"github.com/charmbracelet/huh/spinner"
 	"github.com/fatih/color"
 )
@@ -63,7 +63,7 @@ func getSyncFilePath() (string, error) {
 }
 
 // saveSyncData saves the sync information to the .syncthing file
-func SaveSyncData(data types.SyncData) error {
+func SaveSyncData(data SyncData) error {
 	path, err := getSyncFilePath()
 	if err != nil {
 		return err
@@ -81,7 +81,7 @@ func SaveSyncData(data types.SyncData) error {
 }
 
 // loadSyncData loads the sync information from the .syncthing file
-func LoadSyncData() (*types.SyncData, error) {
+func LoadSyncData() (*SyncData, error) {
 	path, err := getSyncFilePath()
 	if err != nil {
 		return nil, err
@@ -95,7 +95,7 @@ func LoadSyncData() (*types.SyncData, error) {
 		return nil, fmt.Errorf("failed to read sync file: %w", err)
 	}
 
-	var syncData types.SyncData
+	var syncData SyncData
 	if err := json.Unmarshal(data, &syncData); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal sync data: %w", err)
 	}
