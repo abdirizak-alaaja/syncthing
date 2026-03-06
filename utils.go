@@ -7,7 +7,6 @@ import (
 	"os"
 	"path/filepath"
 
-	// "github.com/abdirizak-alaaja/syncthing/types"
 	"github.com/charmbracelet/huh/spinner"
 	"github.com/fatih/color"
 )
